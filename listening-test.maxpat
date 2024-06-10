@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 99.0, 962.0, 823.0 ],
+		"rect" : [ 34.0, 100.0, 962.0, 823.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -41,62 +41,39 @@
 		"title" : "Test odsłuchowy",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-36",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patcher" : 					{
-						"fileversion" : 1,
-						"appversion" : 						{
-							"major" : 8,
-							"minor" : 6,
-							"revision" : 2,
-							"architecture" : "x64",
-							"modernui" : 1
-						}
-,
-						"classnamespace" : "box",
-						"rect" : [ 34.0, 98.0, 1402.0, 824.0 ],
-						"bglocked" : 0,
-						"openinpresentation" : 0,
-						"default_fontsize" : 12.0,
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"gridonopen" : 1,
-						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 1,
-						"objectsnaponopen" : 1,
-						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
-						"lefttoolbarpinned" : 0,
-						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
-						"bottomtoolbarpinned" : 0,
-						"toolbars_unpinned_last_save" : 0,
-						"tallnewobj" : 0,
-						"boxanimatetime" : 200,
-						"enablehscroll" : 1,
-						"enablevscroll" : 1,
-						"devicewidth" : 0.0,
-						"description" : "",
-						"digest" : "",
-						"tags" : "",
-						"style" : "",
-						"subpatcher_template" : "",
-						"assistshowspatchername" : 0,
-						"boxes" : [  ],
-						"lines" : [  ]
-					}
-,
-					"patching_rect" : [ 576.0, 76.0, 99.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"description" : "",
-						"digest" : "",
-						"globalpatchername" : "",
-						"tags" : ""
-					}
-,
-					"text" : "patcher welcome"
+					"id" : "obj-34",
+					"maxclass" : "slider",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1090.0, 676.0, 20.0, 140.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "gain~",
+					"multichannelvariant" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 734.0, 573.0, 29.0, 143.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 786.0, 497.0, 24.0, 24.0 ],
+					"varname" : "btn_wake_up"
 				}
 
 			}
@@ -136,37 +113,13 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-49",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 588.0, 480.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-44",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 588.0, 522.0, 89.0, 22.0 ],
-					"text" : "metro 1200000"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-32",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 629.0, 558.0, 61.0, 22.0 ],
-					"text" : "delay 100"
+					"patching_rect" : [ 827.0, 547.0, 67.0, 22.0 ],
+					"text" : "delay 1000"
 				}
 
 			}
@@ -177,7 +130,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 588.0, 700.0, 29.5, 22.0 ],
+					"patching_rect" : [ 786.0, 689.0, 29.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -189,7 +142,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 629.0, 591.0, 29.5, 22.0 ],
+					"patching_rect" : [ 827.0, 580.0, 29.5, 22.0 ],
 					"text" : "0"
 				}
 
@@ -201,7 +154,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 588.0, 591.0, 29.5, 22.0 ],
+					"patching_rect" : [ 786.0, 580.0, 29.5, 22.0 ],
 					"text" : "1"
 				}
 
@@ -215,8 +168,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "signal", "", "" ],
-					"patching_rect" : [ 588.0, 634.0, 139.0, 23.0 ],
-					"text" : "adsr~ 100 100 0.5 100"
+					"patching_rect" : [ 786.0, 623.0, 128.0, 23.0 ],
+					"text" : "adsr~ 100 100 1 100"
 				}
 
 			}
@@ -227,7 +180,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 588.0, 735.0, 72.0, 22.0 ],
+					"patching_rect" : [ 786.0, 773.0, 72.0, 22.0 ],
 					"text" : "mc.dup~ 16"
 				}
 
@@ -252,7 +205,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 622.0, 667.0, 38.0, 22.0 ],
+					"patching_rect" : [ 820.0, 656.0, 38.0, 22.0 ],
 					"text" : "pink~"
 				}
 
@@ -374,7 +327,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 281.578944683074951, 211.842103242874146, 38.0, 22.0 ],
-					"text" : "int 50"
+					"text" : "int 82"
 				}
 
 			}
@@ -659,7 +612,7 @@
 						"parameter_enable" : 0
 					}
 ,
-					"text" : "js controller.js 2"
+					"text" : "js controller.js 16"
 				}
 
 			}
@@ -713,12 +666,12 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1249.999988079071045, 647.368414878845215, 172.0, 77.0 ],
+					"patching_rect" : [ 1220.078936815261841, 646.052625417709351, 227.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 844.0, 145.0, 210.0, 75.0 ],
 					"readonly" : 1,
 					"style" : "rnbolight",
-					"text" : "1/2",
+					"text" : "128/128",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"textjustification" : 1,
 					"varname" : "label_progress"
@@ -1010,8 +963,9 @@
 					"presentation" : 1,
 					"presentation_linecount" : 11,
 					"presentation_rect" : [ 355.5, 232.0, 1187.0, 666.0 ],
+					"readonly" : 1,
 					"style" : "rnbolight",
-					"text" : "Dziękuję za chęć udziału w teście odsłuchowym. Wyniki niniejszych badań zostaną wykorzystane w pracy doktorskiej dotyczącej wpływu dźwięku przestrzennego na emocje oraz w publikacji naukowej. \n\nTwoim zadaniem będzie ocena uczucia strachu w odtwarzanych próbkach dźwiękowych. Przewidywany czas testu wynosi ok. 10 min. \n\nNiniejszy formularz składa się z ankiety osobowej, części treningowej, oraz testu odsłuchowego.",
+					"text" : "Dziękuję za chęć udziału w teście odsłuchowym. Wyniki niniejszych badań zostaną wykorzystane w pracy doktorskiej dotyczącej wpływu dźwięku przestrzennego na emocje oraz w publikacji naukowej. \n\nTwoim zadaniem będzie ocena uczucia strachu w odtwarzanych próbkach dźwiękowych. Przewidywany czas testu wynosi ok. 25 min. \n\nNiniejszy formularz składa się z ankiety osobowej, części treningowej, oraz testu odsłuchowego.",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"varname" : "label_welcome"
 				}
@@ -1096,6 +1050,7 @@
 					"patching_rect" : [ 249.999997615814209, 1136.842094421386719, 660.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 435.0, 700.0, 660.0, 45.0 ],
+					"readonly" : 1,
 					"text" : "4. Czy wyrażasz zgodę na udział w badaniu? ",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"varname" : "label_personalinfo5"
@@ -1497,6 +1452,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"order" : 1,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"order" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-14", 0 ]
 				}
@@ -1602,6 +1573,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
@@ -1609,7 +1587,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-30", 0 ]
 				}
 
@@ -1651,22 +1629,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
-					"order" : 1,
-					"source" : [ "obj-44", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-32", 0 ],
-					"order" : 0,
-					"source" : [ "obj-44", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-72", 0 ],
 					"source" : [ "obj-47", 0 ]
 				}
@@ -1676,13 +1638,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-74", 0 ],
 					"source" : [ "obj-48", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-44", 0 ],
-					"source" : [ "obj-49", 0 ]
 				}
 
 			}
@@ -1864,7 +1819,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "controller.js",
-				"bootpath" : "~/Desktop/Doktorat/Badanie 1",
+				"bootpath" : "~/Desktop/Badania/Pilot/MaxListeningTest",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
@@ -1875,13 +1830,13 @@
 				"boxes" : [ "obj-64", "obj-96", "obj-95", "obj-86", "obj-48", "obj-40", "obj-83", "obj-63", "obj-47", "obj-62", "obj-38", "obj-71", "obj-69", "obj-60", "obj-61", "obj-66", "obj-67", "obj-68", "obj-73", "obj-81", "obj-98", "obj-97" ]
 			}
 , 			{
-				"boxes" : [ "obj-14", "obj-103", "obj-3", "obj-25", "obj-23", "obj-30", "obj-32", "obj-44", "obj-49" ]
+				"boxes" : [ "obj-76", "obj-74", "obj-72", "obj-70" ]
 			}
 , 			{
 				"boxes" : [ "obj-122", "obj-111", "obj-104", "obj-41", "obj-10" ]
 			}
 , 			{
-				"boxes" : [ "obj-76", "obj-74", "obj-72", "obj-70" ]
+				"boxes" : [ "obj-3", "obj-30", "obj-103", "obj-29", "obj-14", "obj-23", "obj-25", "obj-32", "obj-13" ]
 			}
  ],
 		"styles" : [ 			{

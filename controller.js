@@ -2,7 +2,7 @@ inlets = 1;
 outlets = 2;
 
 var SCORE_SCALE = 5;
-var SOUNDS = ["hog.wav", "scream.wav", "knocking.wav", "cave.wav", "glass.wav"];
+var SOUNDS = ["hog.wav", "knocking.wav", "cave.wav", "glass.wav"];
 var CHANNELS = jsarguments[1];
 var PARTICIPANT_INFO_FILENAME = "participants.csv";
 var LISTENING_TEST_DATA_FILENAME = "data.csv";
@@ -587,6 +587,9 @@ GoodbyeScene.prototype.get_type = function() {
 var current_scene = new WelcomeScene();
 reset_all();
 current_scene.start();
+
+var btn_wake_up = context.patcher.getnamed("btn_wake_up");
+btn_wake_up.message("bang");
 
 function reset_all() {
 	this.patcher.getnamed("btn_next").message("hidden", false);
