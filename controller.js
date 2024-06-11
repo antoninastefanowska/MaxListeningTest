@@ -1,9 +1,10 @@
 inlets = 1;
 outlets = 2;
 
-var SCORE_SCALE = 5;
-var SOUNDS = ["hog.wav", "knocking.wav", "cave.wav", "glass.wav"];
-var CHANNELS = jsarguments[1];
+var SCORE_SCALE = 7;
+var SOUNDS = ["hog.wav", "knocking.wav", "glass.wav"];
+var CHANNELS = [1, 3, 5, 7, 9, 11, 13, 15];
+var BASE_PATH = "Macintosh HD:/Users/antoninastefanowska/Desktop/Badania/Pilot/MaxListeningTest/"
 var PARTICIPANT_INFO_FILENAME = "participants.csv";
 var LISTENING_TEST_DATA_FILENAME = "data.csv";
 var DEFAULT_CHANNEL = 0;
@@ -27,6 +28,19 @@ function format_date(date) {
 	var minutes = format_digits(date.getMinutes())
 	var seconds = format_digits(date.getSeconds());
 	return hour + ":" + minutes + ":" + seconds + " " + day + "-" + month + "-" + year;
+}
+
+function shuffle(array) {
+	var new_array = [];
+	var index = array.length;
+	for (var i in array)
+		new_array.push(array[i]);
+	while (index > 0) {
+		var new_index = random_index(index);
+		index--;
+		[new_array[index], new_array[new_index]] = [new_array[new_index], new_array[index]];
+	}
+	return new_array;
 }
 
 // =====================================================
@@ -214,7 +228,7 @@ PersonalInfoScene.prototype.save_data = function() {
 
 	var file = null;
 	if (current_participant_id == null) {
-		file = new File(PARTICIPANT_INFO_FILENAME, "readwrite");
+		file = new File(BASE_PATH + PARTICIPANT_INFO_FILENAME, "readwrite");
 		var line = null;
 
 		file.open();
@@ -230,7 +244,7 @@ PersonalInfoScene.prototype.save_data = function() {
 		} else
 			current_participant_id = 0;
 	} else {
-		file = new File(PARTICIPANT_INFO_FILENAME, "write");
+		file = new File(BASE_PATH + PARTICIPANT_INFO_FILENAME, "write");
 		file.position = file.eof;
 	}
 	
@@ -354,8 +368,13 @@ function PreviewScene() {
 	this.controls.push(context.patcher.getnamed("radiobtn_score"));
 	this.controls.push(context.patcher.getnamed("label_question"));
 	this.controls.push(context.patcher.getnamed("label_progress"));
-	this.controls.push(context.patcher.getnamed("label_disagree"));
-	this.controls.push(context.patcher.getnamed("label_agree"));
+	this.controls.push(context.patcher.getnamed("label_scale1"));
+	this.controls.push(context.patcher.getnamed("label_scale2"));
+	this.controls.push(context.patcher.getnamed("label_scale3"));
+	this.controls.push(context.patcher.getnamed("label_scale4"));
+	this.controls.push(context.patcher.getnamed("label_scale5"));
+	this.controls.push(context.patcher.getnamed("label_scale6"));
+	this.controls.push(context.patcher.getnamed("label_scale7"));
 }
 
 PreviewScene.prototype = Object.create(BaseScene.prototype);
@@ -388,10 +407,11 @@ PreviewScene.prototype.get_type = function() {
 
 PreviewScene.prototype.play_track = function() {
 	var sound = SOUNDS[this.current_track_index];
-	var channel = random_index(CHANNELS);
+	var channel = CHANNELS[random_index(CHANNELS.length)];
+
 	outlet(0, "open", sound);
 	outlet(0, "int", 1);
-	outlet(1, "int", channel + 1);
+	outlet(1, "int", channel);
 }
 
 PreviewScene.prototype.get_track_count = function() {
@@ -470,11 +490,11 @@ ListeningTestScene.prototype.save_data = function() {
 	var entry = {
 		participant_id: current_participant_id, 
 		sound: this.playlist[this.current_track_index].sound, 
-		channel: this.playlist[this.current_track_index].channel + 1, 
+		channel: this.playlist[this.current_track_index].channel, 
 		score: this.current_score 
 	};
 
-	var file = new File(LISTENING_TEST_DATA_FILENAME, "write");
+	var file = new File(BASE_PATH + LISTENING_TEST_DATA_FILENAME, "write");
 	var keys = Object.keys(entry);
 	file.open();
 
@@ -509,7 +529,7 @@ ListeningTestScene.prototype.play_track = function() {
 	
 	outlet(0, "open", sound);
 	outlet(0, "int", 1);
-	outlet(1, "int", channel + 1);
+	outlet(1, "int", channel);
 }
 
 ListeningTestScene.prototype.finished_playlist = function() {
@@ -521,27 +541,20 @@ ListeningTestScene.prototype.get_track_count = function() {
 }
 
 ListeningTestScene.prototype.generate_playlist = function() {
-	var taken_indices = [];
-	var track_count = 2 * SOUNDS.length * CHANNELS;
-	var playlist = Array(track_count);
-	
-	for (var i = 0; i < SOUNDS.length; i++) {
-		for (var j = 0; j < CHANNELS; j++) {
-			var ind1, ind2;
-			do {
-				ind1 = random_index(track_count);
-			} while (taken_indices.indexOf(ind1) > -1);
-			taken_indices.push(ind1);
-			
-			do {
-				ind2 = random_index(track_count);
-			} while (taken_indices.indexOf(ind2) > -1 || Math.abs(ind1-ind2) < 2);
-			taken_indices.push(ind2);
-			
-			playlist[ind1] = playlist[ind2] = {
-				sound: SOUNDS[i], 
-				channel: j
+	var playlist = [];
+	var shuffled_sounds = shuffle(SOUNDS);
+
+	for (var i in shuffled_sounds) {
+		var sound = shuffled_sounds[i];
+		var shuffled_channels = shuffle(CHANNELS.concat(CHANNELS));
+		
+		for (var j in shuffled_channels) {
+			var channel = shuffled_channels[j];
+			var track = {
+				sound: sound,
+				channel: channel
 			};
+			playlist.push(track);
 		}
 	}
 	return playlist;
@@ -597,8 +610,14 @@ function reset_all() {
 	this.patcher.getnamed("radiobtn_score").message("hidden", true);
 	this.patcher.getnamed("label_training").message("hidden", true);
 	this.patcher.getnamed("label_question").message("hidden", true);
-	this.patcher.getnamed("label_disagree").message("hidden", true);
-	this.patcher.getnamed("label_agree").message("hidden", true);
+
+	this.patcher.getnamed("label_scale1").message("hidden", true);
+	this.patcher.getnamed("label_scale2").message("hidden", true);
+	this.patcher.getnamed("label_scale3").message("hidden", true);
+	this.patcher.getnamed("label_scale4").message("hidden", true);
+	this.patcher.getnamed("label_scale5").message("hidden", true);
+	this.patcher.getnamed("label_scale6").message("hidden", true);
+	this.patcher.getnamed("label_scale7").message("hidden", true);
 
 	this.patcher.getnamed("label_welcome").message("hidden", true);
 

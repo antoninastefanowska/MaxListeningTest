@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 962.0, 823.0 ],
+		"rect" : [ 136.0, 148.0, 965.0, 823.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -41,13 +41,292 @@
 		"title" : "Test odsłuchowy",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "slider",
-					"numinlets" : 1,
+					"id" : "obj-53",
+					"maxclass" : "message",
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
+					"patching_rect" : [ 1417.045441031455994, 689.0, 53.0, 22.0 ],
+					"text" : "list 0 6 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-52",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1417.045441031455994, 593.789468288421631, 53.0, 22.0 ],
+					"text" : "list 0 5 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-51",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1417.045441031455994, 493.909086465835571, 53.0, 22.0 ],
+					"text" : "list 0 4 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1417.045441031455994, 389.47368049621582, 53.0, 22.0 ],
+					"text" : "list 0 3 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-49",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1417.045441031455994, 296.052628755569458, 53.0, 22.0 ],
+					"text" : "list 0 2 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-46",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1417.045441031455994, 197.736840486526489, 53.0, 22.0 ],
+					"text" : "list 0 1 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1417.045441031455994, 93.909090280532837, 53.0, 22.0 ],
+					"text" : "list 0 0 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "",
+					"autoscroll" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"fontname" : "Lato",
+					"fontsize" : 30.0,
+					"hidden" : 1,
+					"id" : "obj-42",
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1090.0, 676.0, 20.0, 140.0 ]
+					"patching_rect" : [ 1078.409080624580383, 661.0, 316.0, 78.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1008.0, 910.0, 295.0, 52.0 ],
+					"readonly" : 1,
+					"text" : "Wcale nie straszny",
+					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
+					"varname" : "label_scale1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "",
+					"autoscroll" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"fontname" : "Lato",
+					"fontsize" : 30.0,
+					"hidden" : 1,
+					"id" : "obj-39",
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1078.409080624580383, 565.789468288421631, 316.0, 78.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1008.0, 806.0, 295.0, 52.0 ],
+					"readonly" : 1,
+					"text" : "Niezbyt straszny",
+					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
+					"varname" : "label_scale2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "",
+					"autoscroll" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"fontname" : "Lato",
+					"fontsize" : 30.0,
+					"hidden" : 1,
+					"id" : "obj-37",
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1078.409080624580383, 465.909086465835571, 316.0, 78.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1008.0, 707.0, 295.0, 52.0 ],
+					"readonly" : 1,
+					"text" : "Trochę straszny",
+					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
+					"varname" : "label_scale3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "",
+					"autoscroll" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"fontname" : "Lato",
+					"fontsize" : 30.0,
+					"hidden" : 1,
+					"id" : "obj-36",
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1078.409080624580383, 368.181814670562744, 316.0, 78.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1008.0, 616.0, 295.0, 52.0 ],
+					"readonly" : 1,
+					"text" : "Straszny",
+					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
+					"varname" : "label_scale4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "",
+					"autoscroll" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"fontname" : "Lato",
+					"fontsize" : 30.0,
+					"hidden" : 1,
+					"id" : "obj-33",
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1078.409080624580383, 268.052628755569458, 316.0, 78.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1008.0, 512.0, 295.0, 52.0 ],
+					"readonly" : 1,
+					"text" : "Całkiem straszny",
+					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
+					"varname" : "label_scale5"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "",
+					"autoscroll" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"fontname" : "Lato",
+					"fontsize" : 30.0,
+					"hidden" : 1,
+					"id" : "obj-28",
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1078.409080624580383, 169.736840486526489, 316.0, 78.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1008.0, 411.0, 295.0, 52.0 ],
+					"readonly" : 1,
+					"text" : "Bardzo straszny",
+					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
+					"varname" : "label_scale6"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "",
+					"autoscroll" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
+					"fontname" : "Lato",
+					"fontsize" : 30.0,
+					"hidden" : 1,
+					"id" : "obj-27",
+					"lines" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1078.409080624580383, 65.909090280532837, 316.0, 78.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 1008.0, 310.0, 295.0, 52.0 ],
+					"readonly" : 1,
+					"text" : "Ekstremalnie straszny",
+					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
+					"textjustification" : 0,
+					"varname" : "label_scale7"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 370.868418216705322, 345.0, 38.0, 22.0 ],
+					"text" : "int 50"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 16,
+					"numoutlets" : 1,
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 654.0, 768.0, 248.0, 22.0 ],
+					"text" : "mc.combine~ 16"
 				}
 
 			}
@@ -170,18 +449,6 @@
 					"outlettype" : [ "signal", "signal", "", "" ],
 					"patching_rect" : [ 786.0, 623.0, 128.0, 23.0 ],
 					"text" : "adsr~ 100 100 1 100"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 786.0, 773.0, 72.0, 22.0 ],
-					"text" : "mc.dup~ 16"
 				}
 
 			}
@@ -328,62 +595,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 281.578944683074951, 211.842103242874146, 38.0, 22.0 ],
 					"text" : "int 82"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "",
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
-					"fontname" : "Lato",
-					"fontsize" : 30.0,
-					"hidden" : 1,
-					"id" : "obj-19",
-					"linecount" : 2,
-					"lines" : 1,
-					"maxclass" : "textedit",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1148.684199571609497, 202.631577014923096, 374.0, 78.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 758.5, 855.0, 374.0, 78.0 ],
-					"readonly" : 1,
-					"text" : "Zdecydowanie się nie zgadzam",
-					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
-					"textjustification" : 1,
-					"varname" : "label_disagree"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "",
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
-					"fontname" : "Lato",
-					"fontsize" : 30.0,
-					"hidden" : 1,
-					"id" : "obj-21",
-					"linecount" : 2,
-					"lines" : 1,
-					"maxclass" : "textedit",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1177.631567716598511, 298.684207677841187, 316.0, 78.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 794.0, 284.0, 316.0, 78.0 ],
-					"readonly" : 1,
-					"text" : "Zdecydowanie się zgadzam",
-					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
-					"textjustification" : 1,
-					"varname" : "label_agree"
 				}
 
 			}
@@ -630,9 +841,11 @@
 			}
 , 			{
 				"box" : 				{
+					"active" : 0,
 					"bgcolor" : [ 0.815686274509804, 0.509803921568627, 0.262745098039216, 1.0 ],
 					"fontface" : 1,
 					"fontsize" : 30.0,
+					"hidden" : 1,
 					"id" : "obj-6",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -654,6 +867,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
 					"fontface" : 1,
@@ -666,12 +880,12 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1220.078936815261841, 646.052625417709351, 227.0, 78.0 ],
+					"patching_rect" : [ 1087.499989628791809, 1264.772715210914612, 227.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 844.0, 145.0, 210.0, 75.0 ],
 					"readonly" : 1,
 					"style" : "rnbolight",
-					"text" : "128/128",
+					"text" : "48/48",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"textjustification" : 1,
 					"varname" : "label_progress"
@@ -691,19 +905,20 @@
 					"one/row" : 1,
 					"outlettype" : [ "list", "list" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 961.842096090316772, 44.736841678619385, 89.0, 470.0 ],
+					"patching_rect" : [ 961.84209599999997, 44.736842000000003, 107.0, 696.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 904.5, 378.0, 89.0, 470.0 ],
-					"rows" : 5,
+					"presentation_rect" : [ 899.0, 282.0, 107.0, 696.0 ],
+					"rows" : 7,
 					"style" : "rnbolight",
 					"varname" : "radiobtn_score",
-					"verticalmargin" : 5
+					"verticalmargin" : 0
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
 					"fontsize" : 40.0,
@@ -715,7 +930,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1169.736830949783325, 31.578947067260742, 331.0, 60.0 ],
+					"patching_rect" : [ 1034.090899229049683, 845.578939199447632, 331.0, 60.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 355.5, 145.0, 182.0, 54.0 ],
 					"readonly" : 1,
@@ -730,6 +945,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"bordercolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 0.0 ],
 					"fontface" : 1,
@@ -737,18 +953,17 @@
 					"fontsize" : 30.0,
 					"hidden" : 1,
 					"id" : "obj-18",
-					"linecount" : 2,
 					"lines" : 1,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1128.947357654571533, 102.631577968597412, 412.0, 85.0 ],
+					"patching_rect" : [ 993.181808710098267, 916.033483982086182, 412.0, 85.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 471.0, 209.0, 963.0, 46.0 ],
 					"readonly" : 1,
-					"text" : "Postrzegam odtwarzany dźwięk jako straszny.",
+					"text" : "Odtwarzany dźwięk jest...",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"textjustification" : 1,
 					"varname" : "label_question"
@@ -947,10 +1162,12 @@
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"background" : 1,
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
 					"fontsize" : 40.0,
+					"hidden" : 1,
 					"id" : "obj-1",
 					"linecount" : 22,
 					"lines" : 1,
@@ -959,13 +1176,13 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1106.578936815261841, 393.421048879623413, 458.0, 104.0 ],
+					"patching_rect" : [ 973.863627076148987, 1010.22726309299469, 458.0, 104.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 11,
 					"presentation_rect" : [ 355.5, 232.0, 1187.0, 666.0 ],
 					"readonly" : 1,
 					"style" : "rnbolight",
-					"text" : "Dziękuję za chęć udziału w teście odsłuchowym. Wyniki niniejszych badań zostaną wykorzystane w pracy doktorskiej dotyczącej wpływu dźwięku przestrzennego na emocje oraz w publikacji naukowej. \n\nTwoim zadaniem będzie ocena uczucia strachu w odtwarzanych próbkach dźwiękowych. Przewidywany czas testu wynosi ok. 25 min. \n\nNiniejszy formularz składa się z ankiety osobowej, części treningowej, oraz testu odsłuchowego.",
+					"text" : "Dziękuję za chęć udziału w teście odsłuchowym. Wyniki niniejszych badań zostaną wykorzystane w pracy doktorskiej dotyczącej wpływu dźwięku przestrzennego na emocje oraz w publikacji naukowej. \n\nTwoim zadaniem będzie ocena uczucia strachu w odtwarzanych próbkach dźwiękowych. Przewidywany czas testu wynosi ok. 10 min. \n\nNiniejszy formularz składa się z ankiety osobowej, części treningowej oraz testu odsłuchowego.",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"varname" : "label_welcome"
 				}
@@ -974,6 +1191,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"background" : 1,
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
@@ -988,7 +1206,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1106.578936815261841, 518.421047687530518, 458.0, 78.0 ],
+					"patching_rect" : [ 973.863627076148987, 1136.363625526428223, 458.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 6,
 					"presentation_rect" : [ 355.5, 232.0, 1187.0, 666.0 ],
@@ -1004,12 +1222,12 @@
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"background" : 1,
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
 					"fontface" : 1,
 					"fontsize" : 60.0,
-					"hidden" : 1,
 					"id" : "obj-80",
 					"linecount" : 5,
 					"lines" : 1,
@@ -1018,7 +1236,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1106.578936815261841, 878.947360038757324, 454.0, 78.0 ],
+					"patching_rect" : [ 973.863627076148987, 1496.590894818305969, 454.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
 					"presentation_rect" : [ 355.5, 232.0, 1187.0, 666.0 ],
@@ -1236,6 +1454,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"background" : 1,
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
@@ -1248,7 +1467,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1181.578936100006104, 972.368411779403687, 303.0, 57.0 ],
+					"patching_rect" : [ 1048.86362636089325, 1590.909075736999512, 303.0, 57.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 801.0, 154.0, 303.0, 57.0 ],
 					"readonly" : 1,
@@ -1263,6 +1482,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "",
+					"autoscroll" : 0,
 					"background" : 1,
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
@@ -1276,13 +1496,13 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1107.894726276397705, 740.789466619491577, 458.0, 102.0 ],
+					"patching_rect" : [ 974.999990701675415, 1359.090896129608154, 458.0, 102.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 16,
 					"presentation_rect" : [ 355.5, 232.0, 1187.0, 666.0 ],
 					"readonly" : 1,
 					"style" : "rnbolight",
-					"text" : "Instrukcja przeprowadzenia testu odsłuchowego:\n\n1. Staraj się nie poruszać głową na boki w trakcie testu.\n\n2. Każdy dźwięk odtworzony zostanie tylko raz natychmiast po naciśnięciu przycisku „Dalej”.\n\n3. Po odsłuchaniu próbki, odpowiedz czy zgadzasz się ze stwierdzeniem widocznym na ekranie.\n\n4. Ocenę możesz zmienić tylko do momentu przejścia do następnej próbki dźwiękowej, nie ma możliwości powrotu do poprzednich ocen.\n\nJeśli zapoznałeś/aś się z instrukcją, wciśnij przycisk \"Dalej\", aby rozpocząć krótką sesję treningową.",
+					"text" : "Instrukcja przeprowadzenia testu odsłuchowego:\n\n1. Staraj się nie poruszać głową na boki w trakcie testu.\n\n2. Każdy dźwięk odtworzony zostanie tylko raz natychmiast po naciśnięciu przycisku „Dalej”.\n\n3. Po odsłuchaniu próbki, odpowiedz na stwierdzenie widoczne na ekranie.\n\n4. Ocenę możesz zmienić tylko do momentu przejścia do następnej próbki dźwiękowej, nie ma możliwości powrotu do poprzednich ocen.\n\nJeśli zapoznałeś/aś się z instrukcją, wciśnij przycisk \"Dalej\", aby rozpocząć krótką sesję treningową.",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"varname" : "label_instruction"
 				}
@@ -1483,22 +1703,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
-					"order" : 4,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"order" : 2,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-31", 0 ],
 					"order" : 5,
 					"source" : [ "obj-16", 0 ]
 				}
@@ -1506,23 +1710,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"order" : 0,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-75", 0 ],
-					"order" : 1,
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-84", 0 ],
+					"destination" : [ "obj-17", 0 ],
 					"order" : 3,
 					"source" : [ "obj-16", 0 ]
 				}
@@ -1530,8 +1718,48 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-3", 0 ],
+					"order" : 0,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
 					"order" : 6,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"order" : 1,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-75", 0 ],
+					"order" : 2,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-84", 0 ],
+					"order" : 4,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"order" : 7,
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -1573,14 +1801,85 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-27", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"source" : [ "obj-28", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 14 ],
+					"order" : 0,
 					"source" : [ "obj-29", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-56", 0 ],
+					"destination" : [ "obj-4", 12 ],
+					"order" : 1,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 10 ],
+					"order" : 2,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 8 ],
+					"order" : 3,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 6 ],
+					"order" : 4,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 4 ],
+					"order" : 5,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 2 ],
+					"order" : 6,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 7,
+					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -1608,8 +1907,43 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"source" : [ "obj-33", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"source" : [ "obj-36", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"source" : [ "obj-37", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-70", 0 ],
 					"source" : [ "obj-38", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-52", 0 ],
+					"source" : [ "obj-39", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -1629,6 +1963,27 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-53", 0 ],
+					"source" : [ "obj-42", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-72", 0 ],
 					"source" : [ "obj-47", 0 ]
 				}
@@ -1643,8 +1998,43 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-49", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-122", 0 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-51", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-52", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-53", 0 ]
 				}
 
 			}
@@ -1836,7 +2226,7 @@
 				"boxes" : [ "obj-122", "obj-111", "obj-104", "obj-41", "obj-10" ]
 			}
 , 			{
-				"boxes" : [ "obj-3", "obj-30", "obj-103", "obj-29", "obj-14", "obj-23", "obj-25", "obj-32", "obj-13" ]
+				"boxes" : [ "obj-30", "obj-103", "obj-29", "obj-14", "obj-23", "obj-25", "obj-32", "obj-13" ]
 			}
  ],
 		"styles" : [ 			{
