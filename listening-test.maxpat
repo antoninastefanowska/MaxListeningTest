@@ -301,7 +301,6 @@
 					"readonly" : 1,
 					"text" : "Ekstremalnie straszny",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
-					"textjustification" : 0,
 					"varname" : "label_scale7"
 				}
 
@@ -1496,13 +1495,13 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 974.999990701675415, 1359.090896129608154, 458.0, 102.0 ],
+					"patching_rect" : [ 975.0, 1361.0, 458.0, 102.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 16,
 					"presentation_rect" : [ 355.5, 232.0, 1187.0, 666.0 ],
 					"readonly" : 1,
 					"style" : "rnbolight",
-					"text" : "Instrukcja przeprowadzenia testu odsłuchowego:\n\n1. Staraj się nie poruszać głową na boki w trakcie testu.\n\n2. Każdy dźwięk odtworzony zostanie tylko raz natychmiast po naciśnięciu przycisku „Dalej”.\n\n3. Po odsłuchaniu próbki, odpowiedz na stwierdzenie widoczne na ekranie.\n\n4. Ocenę możesz zmienić tylko do momentu przejścia do następnej próbki dźwiękowej, nie ma możliwości powrotu do poprzednich ocen.\n\nJeśli zapoznałeś/aś się z instrukcją, wciśnij przycisk \"Dalej\", aby rozpocząć krótką sesję treningową.",
+					"text" : "Instrukcja przeprowadzenia testu odsłuchowego:\n\n1. Każdy dźwięk odtworzony zostanie tylko raz natychmiast po naciśnięciu przycisku „Dalej”.\n\n2. Po odsłuchaniu próbki, odpowiedz na stwierdzenie widoczne na ekranie.\n\n3. Ocenę możesz zmienić tylko do momentu przejścia do następnej próbki dźwiękowej, nie ma możliwości powrotu do poprzednich ocen.\n\n4. Staraj się nie poruszać głową na boki w trakcie testu.\n\nJeśli zapoznałeś/aś się z instrukcją, wciśnij przycisk \"Dalej\", aby rozpocząć krótką sesję treningową.",
 					"textcolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 1.0 ],
 					"varname" : "label_instruction"
 				}
