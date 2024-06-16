@@ -3,8 +3,10 @@ outlets = 2;
 
 var SCORE_SCALE = 7;
 var SOUNDS = ["hog.wav", "knocking.wav", "glass.wav"];
+//var CHANNELS = [1, 2];
 var CHANNELS = [1, 3, 5, 7, 9, 11, 13, 15];
-var BASE_PATH = "Macintosh HD:/Users/antoninastefanowska/Desktop/Badania/Pilot/MaxListeningTest/"
+//var BASE_PATH = "Macintosh HD:/Users/antoninastefanowska/Desktop/Doktorat/Badanie 1/project/"; 
+var BASE_PATH = "Macintosh HD:/Users/antoninastefanowska/Desktop/Badania/Pilot/MaxListeningTest/";
 var PARTICIPANT_INFO_FILENAME = "participants.csv";
 var LISTENING_TEST_DATA_FILENAME = "data.csv";
 var DEFAULT_CHANNEL = 0;
@@ -254,7 +256,8 @@ PersonalInfoScene.prototype.save_data = function() {
 		age: this.age,
 		hearing_problems: this.hearing_problems,
 		agreement: this.agreement,
-		timestamp: format_date(new Date())
+		start: null,
+		end: null
 	};
 
 	var keys = Object.keys(entry);
@@ -262,8 +265,13 @@ PersonalInfoScene.prototype.save_data = function() {
 		var header = keys.join(",");
 		file.writeline(header);
 	}
-	var new_line = keys.map(function(key) { return entry[key] }).join(",");
-	file.writeline(new_line);
+	var new_line = keys.filter(function(key) {
+		return entry[key] != null;
+	}).map(function(key) { 
+		return entry[key];
+	}).join(",");
+
+	file.writestring(new_line);
 	file.close();
 }
 
@@ -447,6 +455,11 @@ PretestScene.prototype.start = function() {
 	this.enable_next_button();
 }
 
+PretestScene.prototype.cleanup = function() {
+	BaseScene.prototype.cleanup.call(this);
+	this.record_time();
+}
+
 PretestScene.prototype.has_next_scene = function() {
 	return true;
 }
@@ -457,6 +470,15 @@ PretestScene.prototype.get_next_scene = function() {
 
 PretestScene.prototype.get_type = function() {
 	return SceneType.PRETEST;
+}
+
+PretestScene.prototype.record_time = function() {
+	var current_time = format_date(new Date());
+	var file = new File(BASE_PATH + PARTICIPANT_INFO_FILENAME, "write");
+
+	file.position = file.eof;
+	file.writestring("," + current_time);
+	file.close();
 }
 
 // =====================================================
@@ -572,6 +594,9 @@ GoodbyeScene.prototype = Object.create(BaseScene.prototype);
 GoodbyeScene.prototype.start = function() {
 	BaseScene.prototype.start.call(this);
 
+	if (current_participant_id != null)
+		this.record_time();
+
 	var btn_next = context.patcher.getnamed("btn_next");
 	btn_next.message("hidden", true);
 }
@@ -593,6 +618,15 @@ GoodbyeScene.prototype.get_next_scene = function() {
 
 GoodbyeScene.prototype.get_type = function() {
 	return SceneType.GOODBYE;
+}
+
+GoodbyeScene.prototype.record_time = function() {
+	var current_time = format_date(new Date());
+	var file = new File(BASE_PATH + PARTICIPANT_INFO_FILENAME, "write");
+
+	file.position = file.eof;
+	file.writestring("," + current_time + "\n");
+	file.close();
 }
 
 // =====================================================
