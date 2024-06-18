@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 136.0, 147.0, 965.0, 823.0 ],
+		"rect" : [ 502.0, 93.0, 1033.0, 891.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 662.0, 741.0, 72.0, 22.0 ],
+					"patching_rect" : [ 686.0, 740.789466619491577, 72.0, 22.0 ],
 					"text" : "mc.dup~ 16"
 				}
 
@@ -840,11 +840,9 @@
 			}
 , 			{
 				"box" : 				{
-					"active" : 0,
 					"bgcolor" : [ 0.815686274509804, 0.509803921568627, 0.262745098039216, 1.0 ],
 					"fontface" : 1,
 					"fontsize" : 30.0,
-					"hidden" : 1,
 					"id" : "obj-6",
 					"maxclass" : "textbutton",
 					"numinlets" : 1,
@@ -1166,7 +1164,6 @@
 					"bgcolor" : [ 0.796078431372549, 0.862745098039216, 0.925490196078431, 0.0 ],
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
 					"fontsize" : 40.0,
-					"hidden" : 1,
 					"id" : "obj-1",
 					"linecount" : 22,
 					"lines" : 1,
@@ -1227,6 +1224,7 @@
 					"bordercolor" : [ 0.337254901960784, 0.384313725490196, 0.462745098039216, 0.0 ],
 					"fontface" : 1,
 					"fontsize" : 60.0,
+					"hidden" : 1,
 					"id" : "obj-80",
 					"linecount" : 5,
 					"lines" : 1,
