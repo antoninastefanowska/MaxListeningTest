@@ -7,8 +7,8 @@ var SOUNDS = ["hog.wav", "knocking.wav", "glass.wav"];
 var CHANNELS = [1, 3, 5, 7, 9, 11, 13, 15];
 //var BASE_PATH = "Macintosh HD:/Users/antoninastefanowska/Desktop/Doktorat/Badanie 1/project/"; 
 var BASE_PATH = "Macintosh HD:/Users/antoninastefanowska/Desktop/Badania/Pilot/MaxListeningTest/";
-var PARTICIPANT_INFO_FILENAME = "participants.csv";
-var LISTENING_TEST_DATA_FILENAME = "data.csv";
+var PARTICIPANT_INFO_FILENAME = "participants2.csv";
+var LISTENING_TEST_DATA_FILENAME = "data2.csv";
 var DEFAULT_CHANNEL = 0;
 
 var context = this;
@@ -23,13 +23,7 @@ function format_digits(value) {
 }
 
 function format_date(date) {
-	var day = format_digits(date.getDate());
-	var month = format_digits(date.getMonth() + 1);
-	var year = date.getFullYear();
-	var hour = format_digits(date.getHours());
-	var minutes = format_digits(date.getMinutes())
-	var seconds = format_digits(date.getSeconds());
-	return hour + ":" + minutes + ":" + seconds + " " + day + "-" + month + "-" + year;
+	return date.toISOString();
 }
 
 function shuffle(array) {
@@ -486,6 +480,8 @@ PretestScene.prototype.record_time = function() {
 function ListeningTestScene() {
 	PreviewScene.call(this);
 	this.current_score = -1;
+	this.current_track_start = null;
+	this.current_track_end = null;
 	this.playlist = this.generate_playlist();
 
 	this.controls.shift();
@@ -513,7 +509,9 @@ ListeningTestScene.prototype.save_data = function() {
 		participant_id: current_participant_id, 
 		sound: this.playlist[this.current_track_index].sound, 
 		channel: this.playlist[this.current_track_index].channel, 
-		score: this.current_score 
+		score: this.current_score,
+		track_start: this.current_track_start,
+		track_end: this.current_track_end
 	};
 
 	var file = new File(BASE_PATH + LISTENING_TEST_DATA_FILENAME, "write");
@@ -552,6 +550,13 @@ ListeningTestScene.prototype.play_track = function() {
 	outlet(0, "open", sound);
 	outlet(0, "int", 1);
 	outlet(1, "int", channel);
+
+	this.current_track_start = format_date(new Date());
+}
+
+ListeningTestScene.prototype.ready = function() {
+	BaseScene.prototype.ready.call(this);
+	this.current_track_end = format_date(new Date());
 }
 
 ListeningTestScene.prototype.finished_playlist = function() {
